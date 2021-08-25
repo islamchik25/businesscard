@@ -19,7 +19,6 @@ li {
 }
 
 body {
-    background-color: blue;
     position: relative;
     font-family: 'Lato', sans-serif;
     display: flex;
@@ -134,7 +133,6 @@ section {
 }
 
 .my-img {
-    background-color: red;
     position: absolute;
     z-index: -1;
     left: 200px;
