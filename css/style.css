@@ -19,6 +19,8 @@ li {
 }
 
 body {
+    background-color: blue;
+    position: relative;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
@@ -118,7 +120,6 @@ nav {
 /* MAIN START */
 
 main {
-    background-color: yellow;
     flex-grow: 1;
     display: flex;
 }
