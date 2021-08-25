@@ -22,7 +22,7 @@ body {
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
-    height: max-content;
+    height: 100vh;
 }
 
 :focus-visible {
@@ -145,6 +145,7 @@ section {
 }
 
 .home__info {
+    background-color: red;
     width: 100%;
     padding-right: 200px;
     display: flex;
