@@ -118,6 +118,7 @@ nav {
 /* MAIN START */
 
 main {
+    background-color: yellow;
     flex-grow: 1;
     display: flex;
 }
