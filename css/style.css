@@ -132,6 +132,7 @@ section {
 }
 
 .my-img {
+    background-color: red;
     position: absolute;
     z-index: -1;
     left: 200px;
@@ -145,7 +146,6 @@ section {
 }
 
 .home__info {
-    background-color: red;
     width: 100%;
     padding-right: 200px;
     display: flex;
