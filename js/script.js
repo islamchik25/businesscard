@@ -96,6 +96,7 @@ class Menu {
         this.logo = document.querySelector(".logo");
         this.catologBlocks = document.querySelectorAll(".project");
         this.progressbar = document.querySelectorAll('.html');
+        this.menumobile = document.querySelector('.menu__nav ');
 
         for (let i = 0; i < this.blocks.length; i++) {
             const elBlock = this.blocks[i];
@@ -105,18 +106,16 @@ class Menu {
                 if (elBlock.className == "home-page") {
                     elBlock.style.display = "flex";
                 } else {
-                    if (elBlock.className != "container__menu") {
                         elBlock.style.display = "none";
-                    }
                 }
             })
 
             if (elBlock.className == "home-page") {
                 elBlock.style.display = "flex";
             } else {
-                if (elBlock.className != "container__menu") {
                     elBlock.style.display = "none";
-                }
+                    elBlock.style.position = "absolute";
+                    elBlock.style.left = "-100%";
             }
         }
 
@@ -124,6 +123,7 @@ class Menu {
             const element = this.element[i];
 
             element.addEventListener("click", () => {
+                this.menumobile.style.left = "-100%";
                 for (let i = 0; i < this.catologBlocks.length; i++) {
                     const catBlock = this.catologBlocks[i];
                     
@@ -142,31 +142,18 @@ class Menu {
 
                     if (element.innerHTML == elBlocks.className) {
                         elBlocks.style.display = "flex";
+                        elBlocks.style.position = "relative";
+                        let left = -100;
+                        requestAnimationFrame(function sectAnim() {
+                            if (left <= 0) {
+                                left += 1.5;
+                                elBlocks.style.left = left + "%";
+                                requestAnimationFrame(sectAnim)};
+                          })
 
-                        if (elBlocks.className == "About") {
-                            for (let i = 0; i < this.progressbar.length; i++) {
-                                const element = this.progressbar[i];
-                                
-                                let width = 1;
-                                let timeint = setInterval(() => {
-                                    if (width >= 60) {
-                                        clearInterval(timeint)
-                                    } else {
-                                        width++
-                                        element.style.width = width + "%";
-                                    }
-                                }, 10); 
-                                
-                            }
-                        }
                     } else {
-                        if (elBlocks.className != "container__menu") {
                             elBlocks.style.display = "none";
-                            for (let i = 0; i < this.progressbar.length; i++) {
-                                const element = this.progressbar[i];
-                                        element.style.width = "0";
-                            }
-                        }
+                            elBlocks.style.left = "-100%";
                     }
                 }
             })
