@@ -145,8 +145,8 @@ class Menu {
                         elBlocks.style.position = "relative";
                         let left = -100;
                         requestAnimationFrame(function sectAnim() {
-                            if (left <= 0) {
-                                left += 1.5;
+                            if (-1 >= left) {
+                                left += 1;
                                 elBlocks.style.left = left + "%";
                                 requestAnimationFrame(sectAnim)};
                           })
