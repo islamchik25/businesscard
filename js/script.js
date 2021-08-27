@@ -216,25 +216,6 @@ class Homebtn {
             `; */
 
 
-        this.element.onmouseover = ()=> {
-            this.child.style.display = "inline-block";
-            setTimeout(() => {
-                this.child.style.opacity = "1";
-                setTimeout(() => {
-                    this.child.style.marginLeft = "20px";
-                }, 200);
-            }, 1000);
-        }
-
-        this.element.onmouseout = ()=> { 
-            this.child.style.marginLeft = "0px";
-            setTimeout(() => {
-                this.child.style.opacity = "0";
-            }, 200);
-            setTimeout(() => {
-                this.child.style.display = "none";
-            }, 1000);
-        }
 
         this.element.addEventListener("click", ()=>{
             for (let i = 0; i < this.section.length; i++) {

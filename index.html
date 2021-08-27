@@ -19,16 +19,15 @@
 
 
 <body>
-<!-- <div class="waves">
+<div class="waves">
     <canvas id="g"></canvas>
 
-    <svg 
+    <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="1400px" height="800px">
-    <ellipse id="svg" ry="700" rx="450" id="svg" cy="300.5" cx="1200.5" fill="none"/>
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <ellipse id="svg" ry="700" rx="450" cy="300.5" cx="1200.5" fill="none"/>
    </svg>
-</div> -->
+</div>
    
 
 
@@ -62,7 +61,7 @@
                 <img src="img/art-head.png" alt="">
             </div>
 
-            <div class="home__info">
+            <div class="home__info wow slideInLeft">
                 <h1 class="home__head">middle web developer</h1>
 
                 <div class="home__parag">
@@ -139,7 +138,6 @@
                     <div class="about-me">
                         <h6>Обо мне</h6>
                         <p>
-                            Изменить
                             На данный момент я оцениваю себя как middle разработчик с опытам работы 2 года над
                             коммерческими проектами, имею большое желание получить больше опыт в разработке, в вашей
                             компании и расти как специалист в сфере веб программирования. Изучал веб программирование
@@ -171,8 +169,8 @@
                     </li>
                     <li class="icon__items"><a href=""><i class="fab fa-facebook-f"></i></a></li>
                     <li class="icon__items"><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li class="icon__items"><a href=""><i class="fab fa-telegram-plane"></i></a></li>
-                    <li class="icon__items"><a href=""><i class="fab fa-github"></i></a></li>
+                    <li class="icon__items"><a href="https://t.me/islammashanlo_20"><i class="fab fa-telegram-plane"></i></a></li>
+                    <li class="icon__items"><a href="https://github.com/islamchik25"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
 
@@ -183,8 +181,21 @@
         </div>
     </main>
 
-
-   <!--  <script src="js/script-waves.js"></script> -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset:       100,
+          callback:     function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+          }
+        }
+      );
+      wow.init();
+      </script>
+    <script src="js/script-waves.js"></script>
     <script src="js/script.js"></script>
 
 </body>

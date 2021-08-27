@@ -1,11 +1,9 @@
 
 let a = document.getElementById("svg");
 let len = a.getTotalLength();
-
 var canvas = document.getElementById('g');
 var ctx = canvas.getContext('2d');
 var parent = canvas.parentElement;
-
 
 class Mouse {
     constructor(canvas) {
@@ -15,13 +13,19 @@ class Mouse {
 
         window.onmousemove = (e) => {
             this.x = e.clientX - rect.left,
-            this.y = e.clientY - rect.top
+                this.y = e.clientY - rect.top
         }
     }
 }
 
-canvas.width = parent.clientWidth;
-canvas.height = parent.clientHeight;
+function sizeCanv() {
+    canvas.width = parent.clientWidth;
+    canvas.height = parent.clientHeight;
+}
+
+sizeCanv()
+window.addEventListener("resize", sizeCanv());
+
 
 
 /* function drawBall (x, y, radius) {  
@@ -48,7 +52,7 @@ class ball {
         this.friction = '0.9';
     }
 
-    setPos(x,y) {
+    setPos(x, y) {
         this.x = x;
         this.y = y;
     }
@@ -57,16 +61,16 @@ class ball {
         let dx = this.x - mouse.x;
         let dy = this.y - mouse.y;
 
-        let dist = Math.sqrt(dx*dx + dy*dy);
-        if(dist<150) {
-            let angle = Math.atan2(dy,dx);
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+            let angle = Math.atan2(dy, dx);
             let tx = mouse.x + Math.cos(angle) * 150;
             let ty = mouse.y + Math.sin(angle) * 150;
 
             this.vx += tx - this.x;
             this.vy += ty - this.y;
         }
-       /*  console.log(dist); */
+        /*  console.log(dist); */
 
         //spring back
 
@@ -114,11 +118,11 @@ for (i = 0; i < len; i++) {
     }
 }
 
-function conectDots (dots) {
+function conectDots(dots) {
     ctx.beginPath();
     var grd = ctx.createLinearGradient(0, 760, 920, 700);
-grd.addColorStop(0.5, "#86a3c9");
-grd.addColorStop(1, "#D1E5FE");
+    grd.addColorStop(0.5, "#86a3c9");
+    grd.addColorStop(1, "#D1E5FE");
 
     ctx.fillStyle = grd;
     for (var i = 0, jlen = dots.length; i <= jlen; i++) {
