@@ -223,10 +223,17 @@ class Homebtn {
 
                 if (elBlocks.className == "About") {
                     elBlocks.style.display = "flex";
+                    elBlocks.style.position = "relative";
+                        let left = -100;
+                        requestAnimationFrame(function sectAnim() {
+                            if (-1 >= left) {
+                                left += 1;
+                                elBlocks.style.left = left + "%";
+                                requestAnimationFrame(sectAnim)};
+                          })
                 } else {
-                    if (elBlocks.className != "container__menu") {
                         elBlocks.style.display = "none";
-                    }
+                        elBlocks.style.left = "-100%";
                 }
             }
         })
