@@ -1,10 +1,13 @@
 
 let a = document.getElementById("svg");
-let len = a.getTotalLength();
 var canvas = document.getElementById('g');
 var ctx = canvas.getContext('2d');
 var parent = canvas.parentElement;
-
+a.setAttribute("ry", parent.clientHeight);
+a.setAttribute("rx", parent.clientWidth / 2);
+a.setAttribute("cy", parent.clientHeight / 2);
+a.setAttribute("cx", parent.clientWidth);
+let len = a.getTotalLength();
 class Mouse {
     constructor(canvas) {
         this.x = 0;
@@ -23,8 +26,8 @@ function sizeCanv() {
     canvas.height = parent.clientHeight;
 }
 
-sizeCanv()
-window.addEventListener("resize", sizeCanv());
+sizeCanv();
+
 
 
 
