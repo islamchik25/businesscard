@@ -114,8 +114,6 @@ class Menu {
                 elBlock.style.display = "flex";
             } else {
                     elBlock.style.display = "none";
-                    elBlock.style.position = "absolute";
-                    elBlock.style.left = "-100%";
             }
         }
 
@@ -142,18 +140,9 @@ class Menu {
 
                     if (element.innerHTML == elBlocks.className) {
                         elBlocks.style.display = "flex";
-                        elBlocks.style.position = "relative";
-                        let left = -100;
-                        requestAnimationFrame(function sectAnim() {
-                            if (-1 >= left) {
-                                left += 1;
-                                elBlocks.style.left = left + "%";
-                                requestAnimationFrame(sectAnim)};
-                          })
 
                     } else {
                             elBlocks.style.display = "none";
-                            elBlocks.style.left = "-100%";
                     }
                 }
             })

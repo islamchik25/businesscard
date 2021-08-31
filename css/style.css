@@ -55,7 +55,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 
 #g {
@@ -63,13 +63,23 @@ button {
     height: 100%;
 }
 
-svg {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#waves {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
+.back {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* ROOT END */
 /* ========================================================= */
 /* HEADER START */
 
 header {
+    overflow: hidden;
     padding: 20px 20px;
 }
 
@@ -138,6 +148,7 @@ section {
 }
 
 .my-img {
+    overflow: hidden;
     position: absolute;
     z-index: -1;
     left: 200px;
@@ -280,7 +291,7 @@ section {
 .left__container {
     padding: 20px;
     margin-right: 20px;
-    background-color: #d1e5ff;
+    background: linear-gradient(90deg, rgba(209,229,255,1) 0%, rgba(134, 163, 201, 0.682) 100%);
     min-width: 270px;
     height: 600px;
     border-radius: 16px;
@@ -290,7 +301,7 @@ section {
     padding: 20px 50px 20px 30px;
     width: 100%;
     height: 600px;
-    background: linear-gradient(90deg, rgba(209,229,255,1) 0%, rgba(134,163,201,0.6839110644257703) 100%);
+    background: linear-gradient(90deg, rgba(209,229,255,1) 0%, rgba(134, 163, 201, 0.682) 100%);
     border-radius: 16px;
 }
 
@@ -380,6 +391,7 @@ h6 {
 }
 
 .translate {
+    background: none;
     margin-bottom: 15px;
     border: none;
 }
