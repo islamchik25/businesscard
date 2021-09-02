@@ -121,6 +121,7 @@ class Menu {
             const element = this.element[i];
 
             element.addEventListener("click", () => {
+                document.body.style.overflow = "visible";
                 this.menumobile.style.left = "-100%";
                 for (let i = 0; i < this.catologBlocks.length; i++) {
                     const catBlock = this.catologBlocks[i];
@@ -168,6 +169,7 @@ class mobileMenu {
         this.close = document.querySelector(obj.close);
         console.log(this.close);
         this.open.addEventListener("click", ()=>{
+            document.body.style.overflow = "hidden";
             this.element.style.display = "flex";
             setTimeout(() => {
                 this.element.style.left = "0";
@@ -175,6 +177,7 @@ class mobileMenu {
         })
 
         this.close.addEventListener("click", ()=>{
+            document.body.style.overflow = "visible";
             this.element.style.left = "-100%";
             setTimeout(() => {
                 this.element.style.display = "none";
