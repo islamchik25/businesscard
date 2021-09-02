@@ -242,6 +242,8 @@ section {
 }
 
 .project {
+    width: 100%;
+    max-width: 250px;
     display: none;
     opacity: 0;
     transition: 1s;
@@ -251,10 +253,16 @@ section {
 }
 
 .projerct-img {
+    overflow: hidden;
+    width: 100%;
     position: relative;
     border: 1px solid silver;
-    width: 350px;
-    height: 250px;
+}
+
+.projerct-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
 .project-hover {
@@ -283,7 +291,7 @@ section {
 }
 
 .About{
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 50px 30px;
     width: 100%;
     display: flex;
 }
@@ -292,15 +300,16 @@ section {
     padding: 20px;
     margin-right: 20px;
     background: linear-gradient(90deg, rgba(209,229,255,1) 0%, rgba(134, 163, 201, 0.682) 100%);
-    min-width: 270px;
-    height: 600px;
+    width: 100%;
+    max-width: 270px;
+    height: 100%;
     border-radius: 16px;
 }
 
 .right__container {
     padding: 20px 50px 20px 30px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     background: linear-gradient(90deg, rgba(209,229,255,1) 0%, rgba(134, 163, 201, 0.682) 100%);
     border-radius: 16px;
 }
@@ -311,15 +320,14 @@ section {
     align-items: center;
 }
 
-.ava_about {
-    margin-bottom: 10px;
+.ava_about  {
     width: 100%;
     max-width: 200px;
     height: 200px;
+    margin-bottom: 10px;
     border-radius: 50%;
-    overflow: hidden;
+    object-fit: cover;
 }
-
 
 h6 {
     font-size: 25px;
@@ -333,9 +341,6 @@ h6 {
     font-weight: 400;
 }
 
-.about-me {
-    width: 100%;
-}
 
 .about-me p {
    display: block;
@@ -344,6 +349,7 @@ h6 {
 
 .about-me ul {
     width: 100%;
+    max-width: 500px;
 }
 
 .about-me ul li {
